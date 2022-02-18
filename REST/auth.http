@@ -1,0 +1,13 @@
+### Variables
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBmOTY2ZTdhMWQyNGEyYzhiZDg5NmIiLCJpYXQiOjE2NDUxODg3MTgsImV4cCI6MTY0NTE4OTA3OH0.W7cL6PdEwSl0rg_LAOpkrZJoIA-4sLil5AaQASXoBfc
+@login = { "email": "hello@email.com", "password": "password" }
+
+### Get authenticated user given the token
+GET  http://localhost:5000/api/auth
+x-auth-token: {{token}}
+
+### Login user and get token
+POST  http://localhost:5000/api/auth
+content-type: application/json
+
+{{login}}
