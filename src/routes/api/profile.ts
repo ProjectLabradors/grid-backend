@@ -5,7 +5,7 @@ import HttpStatusCodes from "http-status-codes";
 import auth from "../../middleware/auth";
 import Profile, { IProfile } from "../../models/Profile";
 import Request from "../../types/Request";
-import User, { IUser } from "../../models/User";
+import {User, IUser } from "../../models/User";
 
 const router: Router = Router();
 
