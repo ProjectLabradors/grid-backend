@@ -5,6 +5,7 @@ import connectDB from "../config/database";
 import auth from "./routes/api/auth";
 import user from "./routes/api/user";
 import profile from "./routes/api/profile";
+import cors from "cors";
 
 const app = express();
 
@@ -15,7 +16,7 @@ connectDB();
 app.set("port", process.env.PORT || 5000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(cors())
 // @route   GET /
 // @desc    Test Base API
 // @access  Public
